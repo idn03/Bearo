@@ -624,7 +624,7 @@ jobs:
 - Implement `AuthContext`, `useAuth` hook, Next.js middleware
 - Wire up Axios interceptors
 
-### Phase 3 — Todo CRUD
+### Phase 3 — Todo CRUD ✅
 - Implement `TodosModule`: controller, service, DTOs
 - Enforce user scoping in service layer
 - Add pagination support (`page`, `limit` query params)
@@ -632,8 +632,9 @@ jobs:
 - Implement toggle completion
 
 ### Phase 4 — UI Enhancements
-- Add dark/light mode with `next-themes` + theme toggle
+- Add animation when switch theme mode
 - Implement layout toggle (compact list vs card view)
+- Add a random sticker for each todo item
 - Store UI preferences in localStorage
 - Polish responsive design
 
