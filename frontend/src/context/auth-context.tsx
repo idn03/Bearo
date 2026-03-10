@@ -52,6 +52,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     localStorage.setItem("token", newToken)
     setToken(newToken)
     await fetchProfile()
+    router.push("/dashboard")
   }
 
   const register = async (username: string, password: string) => {
@@ -63,6 +64,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     localStorage.setItem("token", newToken)
     setToken(newToken)
     await fetchProfile()
+    router.push("/dashboard")
   }
 
   const logout = () => {
