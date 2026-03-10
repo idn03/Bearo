@@ -4,6 +4,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { TodoItem } from "@/components/todo-item"
 import type { Todo } from "@/types"
+import type { LayoutMode } from "@/hooks/use-layout-preference"
 
 interface TodoListProps {
   todos: Todo[]
@@ -11,6 +12,7 @@ interface TodoListProps {
   totalPages: number
   total: number
   isLoading: boolean
+  layout: LayoutMode
   onPageChange: (page: number) => void
   onUpdate: (
     id: string,
@@ -25,17 +27,20 @@ export function TodoList({
   totalPages,
   total,
   isLoading,
+  layout,
   onPageChange,
   onUpdate,
   onDelete,
 }: TodoListProps) {
   if (isLoading) {
     return (
-      <div className="space-y-2">
+      <div className={layout === "card" ? "grid grid-cols-1 gap-3 sm:grid-cols-2" : "space-y-2"}>
         {Array.from({ length: 3 }).map((_, i) => (
           <div
             key={i}
-            className="h-12 animate-pulse rounded-lg bg-muted/50"
+            className={`animate-pulse rounded-lg bg-muted/50 ${
+              layout === "card" ? "h-28" : "h-12"
+            }`}
           />
         ))}
       </div>
@@ -52,11 +57,18 @@ export function TodoList({
 
   return (
     <div>
-      <div className="space-y-1">
+      <div
+        className={
+          layout === "card"
+            ? "grid grid-cols-1 gap-3 sm:grid-cols-2"
+            : "space-y-1"
+        }
+      >
         {todos.map((todo) => (
           <TodoItem
             key={todo.id}
             todo={todo}
+            layout={layout}
             onUpdate={onUpdate}
             onDelete={onDelete}
           />
