@@ -615,12 +615,12 @@ jobs:
 - Configure ESLint, Prettier, TypeScript strict mode
 - Create Prisma schema with User and Todo models
 
-### Phase 2 — Authentication
+### Phase 2 — Authentication ✅
 - Implement `UsersModule` and `UsersService`
 - Implement `AuthModule`: register, login, JWT strategy, guard
 - Add rate limiting to auth endpoints
 - Build frontend login and register dialogs (Shadcn forms)
-- Set up the light/dark mode toggle
+- Set up the light/dark mode toggle (UI only)
 - Implement `AuthContext`, `useAuth` hook, Next.js middleware
 - Wire up Axios interceptors
 
