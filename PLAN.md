@@ -619,7 +619,8 @@ jobs:
 - Implement `UsersModule` and `UsersService`
 - Implement `AuthModule`: register, login, JWT strategy, guard
 - Add rate limiting to auth endpoints
-- Build frontend login and register pages (Shadcn forms)
+- Build frontend login and register dialogs (Shadcn forms)
+- Set up the light/dark mode toggle
 - Implement `AuthContext`, `useAuth` hook, Next.js middleware
 - Wire up Axios interceptors
 
@@ -642,7 +643,7 @@ jobs:
 - Test data isolation between users
 - Add unit tests for critical logic (password hashing, JWT)
 
-### Phase 6 — CI/CD
+### Phase 6 — CI/CD ✅
 - Set up GitHub Actions workflow (lint, typecheck, test, build)
 - Configure PostgreSQL service container for CI
 - Add Playwright E2E job
