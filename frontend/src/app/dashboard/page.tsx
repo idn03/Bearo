@@ -4,8 +4,10 @@ import { useEffect } from "react"
 import { useRouter } from "next/navigation"
 import { useAuth } from "@/context/auth-context"
 import { useTodos } from "@/hooks/use-todos"
+import { useLayoutPreference } from "@/hooks/use-layout-preference"
 import { TodoForm } from "@/components/todo-form"
 import { TodoList } from "@/components/todo-list"
+import { LayoutToggle } from "@/components/layout-toggle"
 
 export default function DashboardPage() {
   const { user, isLoading: authLoading } = useAuth()
@@ -21,6 +23,7 @@ export default function DashboardPage() {
     updateTodo,
     deleteTodo,
   } = useTodos()
+  const { layout, toggleLayout } = useLayoutPreference()
 
   useEffect(() => {
     if (!authLoading && !user) {
@@ -38,11 +41,14 @@ export default function DashboardPage() {
 
   return (
     <main className="mx-auto w-full max-w-2xl px-4 py-8">
-      <div className="mb-6">
-        <h1 className="text-2xl font-bold tracking-tight">My Todos</h1>
-        <p className="text-sm text-muted-foreground">
-          Welcome back 👋, {user.username}
-        </p>
+      <div className="mb-6 flex items-end justify-between">
+        <div>
+          <h1 className="text-2xl font-bold tracking-tight">My Todos</h1>
+          <p className="text-sm text-muted-foreground">
+            Welcome back 👋, {user.username}
+          </p>
+        </div>
+        <LayoutToggle layout={layout} onToggle={toggleLayout} />
       </div>
 
       <div className="space-y-6">
@@ -58,6 +64,7 @@ export default function DashboardPage() {
           totalPages={totalPages}
           total={total}
           isLoading={isLoading}
+          layout={layout}
           onPageChange={setPage}
           onUpdate={async (id, data) => {
             await updateTodo(id, data)
