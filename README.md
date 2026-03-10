@@ -4,7 +4,7 @@ A full-stack task management application built with Next.js and NestJS. Bearo co
 
 ## Demo
 
-<video src="demo.mov" controls width="100%"></video>
+<video src="demo.mp4" controls width="100%"></video>
 
 ## Tech Stack
 
