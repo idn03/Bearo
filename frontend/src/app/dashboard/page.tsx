@@ -41,7 +41,7 @@ export default function DashboardPage() {
       <div className="mb-6">
         <h1 className="text-2xl font-bold tracking-tight">My Todos</h1>
         <p className="text-sm text-muted-foreground">
-          Welcome back, {user.username}
+          Welcome back 👋, {user.username}
         </p>
       </div>
 

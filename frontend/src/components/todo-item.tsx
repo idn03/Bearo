@@ -142,7 +142,7 @@ export function TodoItem({ todo, onUpdate, onDelete }: TodoItemProps) {
           disabled={isLoading}
           aria-label="Edit todo"
         >
-          <Pencil className="size-3" />
+          <Pencil className="size-4" />
         </Button>
         <Button
           variant="destructive"
@@ -151,7 +151,7 @@ export function TodoItem({ todo, onUpdate, onDelete }: TodoItemProps) {
           disabled={isLoading}
           aria-label="Delete todo"
         >
-          <Trash2 className="size-3" />
+          <Trash2 className="size-4" />
         </Button>
       </div>
     </div>
