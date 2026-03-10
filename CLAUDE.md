@@ -78,7 +78,7 @@ NEXT_PUBLIC_API_URL=http://localhost:3001/api
 ## Development Roadmap Status
 
 - [x] Phase 1 — Project Setup
-- [ ] Phase 2 — Authentication (backend auth module + frontend auth pages)
+- [x] Phase 2 — Authentication (backend auth module + frontend auth pages)
 - [ ] Phase 3 — Todo CRUD (backend endpoints + frontend dashboard)
 - [ ] Phase 4 — UI Enhancements (dark mode, layout toggle, responsive)
 - [ ] Phase 5 — Testing (backend e2e + Playwright)
