@@ -82,7 +82,7 @@ NEXT_PUBLIC_API_URL=http://localhost:3001/api
 - [ ] Phase 3 — Todo CRUD (backend endpoints + frontend dashboard)
 - [ ] Phase 4 — UI Enhancements (dark mode, layout toggle, responsive)
 - [ ] Phase 5 — Testing (backend e2e + Playwright)
-- [ ] Phase 6 — CI/CD (GitHub Actions)
+- [x] Phase 6 — CI/CD (GitHub Actions)
 
 ## Conventions
 
